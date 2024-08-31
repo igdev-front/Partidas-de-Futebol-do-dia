@@ -1,0 +1,185 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo geral da página */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: url('futuristic-soccer-field-illustration.jpg'); /* Substitua pelo caminho da sua imagem */
+    background-size: cover; /* Ajusta o tamanho da imagem para cobrir a tela */
+    background-position: center; /* Centraliza a imagem */
+    background-attachment: fixed; /* Fixa a imagem ao rolar a página */
+    background-repeat: no-repeat; /* Impede a repetição da imagem */
+    color: #f0f0f0; /* Cor do texto para contrastar com o fundo */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 20px;
+    font-family: "Poppins", system-ui;
+}
+
+
+/* Estilo do header */
+header {
+    width: 100%;
+    background-color: rgba(47, 6, 94, 0.459); /* Fundo escuro semi-transparente para o header */
+    padding: 10px 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Estilo do título do header */
+header h1 {
+    color: #ffffff;
+    font-size: 1.8rem;
+    letter-spacing: 1.5px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    margin-bottom: 10px;
+}
+
+/* Estilo do menu de navegação */
+header nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+header nav ul li {
+    display: inline;
+}
+
+header nav ul li a {
+    color: #e0e1dd;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #ffffff;
+}
+
+/* Estilo do contêiner principal */
+.container {
+    width: 100%;
+    max-width: 900px;
+    background-color: rgba(46, 0, 131, 0.445); /* Fundo escuro semi-transparente para o contêiner */
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Estilo do título principal */
+h2 {
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilo da lista de partidas */
+#matches-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Estilo de cada item de partida */
+.match {
+    background-color: #e0e1dd;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+}
+
+/* Efeito hover para itens de partida */
+.match:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    background-color: #f0a500;
+    color: #1b263b;
+}
+
+/* Estilo dos títulos dentro dos itens de partida */
+.match h2 {
+    margin: 0 0 8px;
+    font-size: 1.2rem;
+    color: #1b263b;
+}
+
+/* Estilo dos parágrafos dentro dos itens de partida */
+.match p {
+    margin: 5px 0;
+    color: #333;
+    font-size: 0.9rem;
+}
+
+/* Destaque para texto forte */
+.match p strong {
+    color: #333;
+}
+
+/* Estilo dos placares */
+.score {
+    font-size: 1.3rem;
+    color: #d00000;
+    font-weight: bold;
+    margin-top: 8px;
+    transition: color 0.3s ease;
+}
+
+/* Efeito hover para os placares */
+.match:hover .score {
+    color: #1b263b;
+}
+
+/* Indicador de partida ao vivo */
+.live-indicator {
+    color: #d00000; /* Cor vermelha para indicar ao vivo */
+    font-weight: bold;
+    font-size: 1rem;
+    margin-top: 5px;
+    animation: blink 1s infinite; /* Efeito de piscar */
+}
+
+/* Efeito de piscar */
+@keyframes blink {
+    0%, 50%, 100% {
+        opacity: 1;
+    }
+    25%, 75% {
+        opacity: 0;
+    }
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.4rem;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    .match {
+        padding: 10px;
+    }
+}
